@@ -5,3 +5,8 @@
  * To learn more about Gradle by exploring our Samples at https://docs.gradle.org/8.5/samples
  * This project uses @Incubating APIs which are subject to change.
  */
+plugins {
+    // because: the dependency analysis plugin uses kotlin
+    // see: https://github.com/autonomousapps/dependency-analysis-android-gradle-plugin/wiki/FAQ
+    kotlin("jvm") version "1.9.23" apply false
+}

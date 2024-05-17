@@ -53,3 +53,8 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 tasks.named("test") {
     dependsOn(":rest-module:jandex")
 }
+
+// Declare an explicit dependency on ':rest-module:jandex' from ':rest-module:quarkusDependenciesBuild' using Task#dependsOn.
+tasks.named("quarkusDependenciesBuild") {
+    dependsOn(":rest-module:jandex")
+}
